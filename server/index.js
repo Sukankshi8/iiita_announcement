@@ -21,9 +21,9 @@ app.use(
 );
 app.use(express.json());
 
-app.post("/login", (req, res) => {
-    res.send("Successful");
-})
+app.get("/", (req, res) => {
+    res.send("API is running");
+});
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', Router);
