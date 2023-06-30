@@ -9,7 +9,7 @@ import Router from './routes/route.js';
 
 
 dotenv.config();
-app.use(express.json());
+
 const app = express();
 
 app.use(
@@ -20,7 +20,7 @@ app.use(
   })
 );
 
-
+app.use(express.json());
 app.get("/", (req, res) => {
     res.send("API is running");
 });
