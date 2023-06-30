@@ -8,7 +8,7 @@ import {
   getType,
 } from "../utils/common-utils";
 
-const API_URL = "https://iiita-announcement-backend.vercel.app/";
+const API_URL = "https://iiita-announcement-backend.vercel.app";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
@@ -116,17 +116,7 @@ const ProcessError = async (error) => {
   }
 };
 
-const API = {
-    getAccessToken: (body) =>{
-        return axiosInstance({
-            method: "POST",
-            url: "auth/login",
-            data: body,
-            responseType: "json",
-            TYPE: getType(SERVICE_URLS["getAccessToken"], body),
-        });
-    }
-}
+const API = {};
 
 for (const [key, value] of Object.entries(SERVICE_URLS)) {
   API[key] = (body, showUploadProgress, showDownloadProgress) =>
