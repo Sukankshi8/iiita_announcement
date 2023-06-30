@@ -9,17 +9,17 @@ import Router from './routes/route.js';
 
 
 dotenv.config();
-
+app.use(express.json());
 const app = express();
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://iiita-announcement-frontend.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
-app.use(express.json());
+
 
 app.get("/", (req, res) => {
     res.send("API is running");
