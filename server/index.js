@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://iiita-announcement-frontend.vercel.app"],
+    origin: ["https://iiita-announcement.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
